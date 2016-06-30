@@ -1,0 +1,800 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="info.androidhive.materialtabs.fragments.OneFragment"
+    android:background="#F2EAD2">
+
+
+    <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Voice Over Rate Calculator"-->
+        <!--android:id="@+id/textView"-->
+        <!--android:layout_alignParentTop="true"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:textColor="#070707"-->
+        <!--android:textSize="20dp" />-->
+
+    <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Recording Fee per script (Year 1 only) €120 Research narrative script (non-broadcast) €165"-->
+        <!--android:id="@+id/textView2"-->
+        <!--android:layout_below="@+id/textView"-->
+        <!--android:layout_alignParentLeft="true"-->
+        <!--android:layout_alignParentStart="true"-->
+        <!--android:textColor="@android:color/black"-->
+        <!--android:textSize="15dp" />-->
+
+    <!--<fr.ganfra.materialspinner.MaterialSpinner-->
+        <!--android:id="@+id/spinner1"-->
+        <!--android:layout_width="300dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="12dp"-->
+        <!--app:ms_arrowColor="#0000FF"-->
+        <!--app:ms_arrowSize="16dp"-->
+        <!--app:ms_floatingLabelColor="#000000"-->
+        <!--app:ms_floatingLabelText="Recording Fee per Script (Year 1 Only)"-->
+        <!--app:ms_hint="Recording Fee per Script (Year 1 Only)"-->
+        <!--app:ms_multiline="true"-->
+        <!--android:layout_below="@+id/textView2"-->
+        <!--android:layout_centerHorizontal="true" />-->
+
+
+    <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:textAppearance="?android:attr/textAppearanceLarge"-->
+        <!--android:id="@+id/textRates"-->
+        <!--android:layout_below="@+id/textView2"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:layout_alignParentEnd="true"-->
+        <!--android:layout_marginRight="30dp" />-->
+
+    <!--<CheckBox-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="All Stations (ROI)"-->
+        <!--android:id="@+id/checkBox"-->
+        <!--android:checked="false"-->
+        <!--android:layout_below="@+id/textView4"-->
+        <!--android:layout_alignParentLeft="true"-->
+        <!--android:layout_alignParentStart="true"-->
+        <!--android:layout_marginTop="27dp" />-->
+
+    <!--<CheckBox-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="All Stations (NI)"-->
+        <!--android:id="@+id/checkBox2"-->
+        <!--android:layout_below="@+id/checkBox"-->
+        <!--android:checked="false" />-->
+
+    <!--<CheckBox-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="All Stations (ROI &amp; NI)"-->
+        <!--android:id="@+id/checkBox3"-->
+        <!--android:layout_below="@+id/checkBox2"-->
+        <!--android:layout_alignParentLeft="true"-->
+        <!--android:layout_alignParentStart="true"-->
+        <!--android:checked="false" />-->
+
+    <!--<CheckBox-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="All Stations (ROI)+ Internet"-->
+        <!--android:id="@+id/checkBox4"-->
+        <!--android:layout_below="@+id/checkBox3"-->
+        <!--android:layout_alignParentLeft="true"-->
+        <!--android:layout_alignParentStart="true"-->
+        <!--android:checked="false" />-->
+
+    <!--<CheckBox-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="All Stations (ROI &amp; NI) +Internet"-->
+        <!--android:id="@+id/checkBox5"-->
+        <!--android:layout_below="@+id/checkBox4"-->
+        <!--android:layout_alignParentLeft="true"-->
+        <!--android:layout_alignParentStart="true"-->
+        <!--android:checked="false" />-->
+
+    <!--<CheckBox-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="TV Narration"-->
+        <!--android:id="@+id/checkBox6"-->
+        <!--android:layout_below="@+id/checkBox5"-->
+        <!--android:layout_alignRight="@+id/checkBox5"-->
+        <!--android:layout_alignEnd="@+id/checkBox5"-->
+        <!--android:layout_alignParentLeft="true"-->
+        <!--android:layout_alignParentStart="true"-->
+        <!--android:checked="false" />-->
+
+    <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:textAppearance="?android:attr/textAppearanceLarge"-->
+        <!--android:text="TV Rates"-->
+        <!--android:id="@+id/textView4"-->
+        <!--android:layout_below="@+id/spinner1"-->
+        <!--android:layout_alignParentLeft="true"-->
+        <!--android:layout_alignParentStart="true" />-->
+
+    <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:textAppearance="?android:attr/textAppearanceLarge"-->
+        <!--android:text="Radio Rates"-->
+        <!--android:id="@+id/textView5"-->
+        <!--android:layout_below="@+id/checkBox6"-->
+        <!--android:layout_alignParentLeft="true"-->
+        <!--android:layout_alignParentStart="true" />-->
+
+    <!--<CheckBox-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="All Stations (ROI)"-->
+        <!--android:id="@+id/checkBox7"-->
+        <!--android:checked="false"-->
+        <!--android:layout_below="@+id/textView5"-->
+        <!--android:layout_alignParentLeft="true"-->
+        <!--android:layout_alignParentStart="true"-->
+        <!--android:layout_marginTop="26dp" />-->
+
+    <!--<CheckBox-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="All Stations (NI)"-->
+        <!--android:id="@+id/checkBox8"-->
+        <!--android:checked="false"-->
+        <!--android:layout_below="@+id/checkBox7"-->
+        <!--android:layout_alignRight="@+id/checkBox4"-->
+        <!--android:layout_alignEnd="@+id/checkBox4"-->
+        <!--android:layout_alignParentLeft="true"-->
+        <!--android:layout_alignParentStart="true" />-->
+
+    <!--<CheckBox-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="All Stations (ROI &amp; NI)"-->
+        <!--android:id="@+id/checkBox9"-->
+        <!--android:checked="false"-->
+        <!--android:layout_below="@+id/checkBox8"-->
+        <!--android:layout_alignRight="@+id/checkBox4"-->
+        <!--android:layout_alignEnd="@+id/checkBox4"-->
+        <!--android:layout_alignParentLeft="true"-->
+        <!--android:layout_alignParentStart="true" />-->
+
+    <!--<CheckBox-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="All Stations (ROI)+ Internet"-->
+        <!--android:id="@+id/checkBox10"-->
+        <!--android:checked="false"-->
+        <!--android:layout_below="@+id/checkBox9"-->
+        <!--android:layout_alignRight="@+id/checkBox4"-->
+        <!--android:layout_alignEnd="@+id/checkBox4" />-->
+
+    <!--<CheckBox-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="All Stations (ROI &amp; NI) +Internet"-->
+        <!--android:id="@+id/checkBox11"-->
+        <!--android:checked="false"-->
+        <!--android:layout_below="@+id/checkBox10"-->
+        <!--android:layout_alignRight="@+id/checkBox4"-->
+        <!--android:layout_alignEnd="@+id/checkBox4" />-->
+
+    <!--<CheckBox-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="TV Narration"-->
+        <!--android:id="@+id/checkBox12"-->
+        <!--android:checked="false"-->
+        <!--android:layout_below="@+id/checkBox11"-->
+        <!--android:layout_alignRight="@+id/checkBox4"-->
+        <!--android:layout_alignEnd="@+id/checkBox4"-->
+        <!--android:layout_alignParentLeft="true"-->
+        <!--android:layout_alignParentStart="true" />-->
+
+    <!--<CheckBox-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Price Individually"-->
+        <!--android:id="@+id/checkBox13"-->
+        <!--android:checked="false"-->
+        <!--android:layout_below="@+id/textView4"-->
+        <!--android:layout_alignParentLeft="true"-->
+        <!--android:layout_alignParentStart="true" />-->
+
+    <!--<CheckBox-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Price Individually"-->
+        <!--android:id="@+id/checkBox14"-->
+        <!--android:checked="false"-->
+        <!--android:layout_below="@+id/textView5"-->
+        <!--android:layout_alignRight="@+id/checkBox7"-->
+        <!--android:layout_alignEnd="@+id/checkBox7"-->
+        <!--android:layout_marginTop="-6dp" />-->
+
+
+    <!--<fr.ganfra.materialspinner.MaterialSpinner-->
+        <!--android:id="@+id/spinner2"-->
+        <!--android:layout_width="300dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--app:ms_arrowColor="#0000FF"-->
+        <!--app:ms_arrowSize="16dp"-->
+        <!--app:ms_floatingLabelColor="#000000"-->
+        <!--app:ms_floatingLabelText="Tags for TV (€ 180 per Tag)"-->
+        <!--app:ms_hint="Tags for TV (€ 180 per Tag)"-->
+        <!--app:ms_multiline="true"-->
+        <!--android:layout_above="@+id/checkBox2"-->
+        <!--android:layout_toRightOf="@+id/checkBox4"-->
+        <!--android:layout_toEndOf="@+id/checkBox4" />-->
+
+    <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:textAppearance="?android:attr/textAppearanceLarge"-->
+        <!--android:text="Tags for TV €180 per Tag"-->
+        <!--android:id="@+id/textView3"-->
+        <!--android:layout_below="@+id/spinner1"-->
+        <!--android:layout_alignLeft="@+id/spinner2"-->
+        <!--android:layout_alignStart="@+id/spinner2"-->
+        <!--android:textSize="15dp" />-->
+
+    <!--<fr.ganfra.materialspinner.MaterialSpinner-->
+        <!--android:id="@+id/spinner3"-->
+        <!--android:layout_width="300dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--app:ms_arrowColor="#0000FF"-->
+        <!--app:ms_arrowSize="16dp"-->
+        <!--app:ms_floatingLabelColor="#000000"-->
+        <!--app:ms_floatingLabelText="Tags for Radio €25 per Tag"-->
+        <!--app:ms_hint="Tags for Radio €25 per Tag"-->
+        <!--app:ms_multiline="true"-->
+        <!--android:layout_above="@+id/checkBox8"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:layout_alignParentEnd="true"-->
+        <!--android:layout_toRightOf="@+id/checkBox8"-->
+        <!--android:layout_toEndOf="@+id/checkBox8" />-->
+
+    <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:textAppearance="?android:attr/textAppearanceLarge"-->
+        <!--android:text="Tags for Radio €25 per Tag"-->
+        <!--android:id="@+id/textView6"-->
+        <!--android:textSize="15dp"-->
+        <!--android:layout_below="@+id/checkBox6"-->
+        <!--android:layout_alignLeft="@+id/spinner3"-->
+        <!--android:layout_alignStart="@+id/spinner3" />-->
+
+    <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:textAppearance="?android:attr/textAppearanceLarge"-->
+        <!--android:id="@+id/price"-->
+        <!--android:text="Price Stations Individually-TV"-->
+        <!--android:layout_above="@+id/tv3"-->
+        <!--android:layout_alignRight="@+id/checkBox27"-->
+        <!--android:layout_alignEnd="@+id/checkBox27"-->
+        <!--android:layout_marginBottom="-12dp" />-->
+
+    <!--<CheckBox-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="RTE1 / RTE2"-->
+        <!--android:id="@+id/rte1andrte2"-->
+        <!--android:layout_below="@+id/checkBox12"-->
+        <!--android:checked="false"-->
+        <!--android:layout_marginTop="20dp" />-->
+    <!--<CheckBox-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="TG4"-->
+        <!--android:id="@+id/tg4"-->
+        <!--android:layout_below="@+id/checkBox12"-->
+        <!--android:checked="false"-->
+        <!--android:layout_marginTop="50dp" />-->
+    <!--<CheckBox-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="3e"-->
+        <!--android:id="@+id/three"-->
+        <!--android:layout_below="@+id/checkBox12"-->
+        <!--android:checked="false"-->
+        <!--android:layout_marginTop="80dp" />-->
+    <!--<CheckBox-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Nickelodeon"-->
+        <!--android:id="@+id/nickelodeon"-->
+        <!--android:layout_below="@+id/checkBox12"-->
+        <!--android:checked="false"-->
+        <!--android:layout_marginTop="110dp" />-->
+    <!--<CheckBox-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Living TV"-->
+        <!--android:id="@+id/livingtv"-->
+        <!--android:layout_below="@+id/checkBox12"-->
+        <!--android:checked="false"-->
+        <!--android:layout_marginTop="140dp" />-->
+
+    <!--<CheckBox-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="MTV"-->
+        <!--android:id="@+id/mtv"-->
+        <!--android:layout_below="@+id/checkBox12"-->
+        <!--android:checked="false"-->
+        <!--android:layout_marginTop="170dp" />-->
+
+    <!--<CheckBox-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Sky (IRL) per package"-->
+        <!--android:id="@+id/skytv"-->
+        <!--android:layout_below="@+id/checkBox12"-->
+        <!--android:checked="false"-->
+        <!--android:layout_marginTop="200dp" />-->
+    <!--<CheckBox-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="TV3"-->
+        <!--android:id="@+id/tv3"-->
+        <!--android:checked="false"-->
+        <!--android:layout_alignTop="@+id/rte1andrte2"-->
+        <!--android:layout_toRightOf="@+id/checkBox12"-->
+        <!--android:layout_toEndOf="@+id/checkBox12" />-->
+
+    <!--<CheckBox-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="UTV"-->
+        <!--android:id="@+id/utv"-->
+        <!--android:checked="false"-->
+        <!--android:layout_below="@+id/tv3"-->
+        <!--android:layout_alignLeft="@+id/tv3"-->
+        <!--android:layout_alignStart="@+id/tv3" />-->
+
+    <!--<CheckBox-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="E4"-->
+        <!--android:id="@+id/e4"-->
+        <!--android:checked="false"-->
+        <!--android:layout_above="@+id/paramount"-->
+        <!--android:layout_alignLeft="@+id/utv"-->
+        <!--android:layout_alignStart="@+id/utv" />-->
+
+    <!--<CheckBox-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Paramount"-->
+        <!--android:id="@+id/paramount"-->
+        <!--android:checked="false"-->
+        <!--android:layout_alignTop="@+id/nickelodeon"-->
+        <!--android:layout_alignLeft="@+id/e4"-->
+        <!--android:layout_alignStart="@+id/e4" />-->
+
+    <!--<CheckBox-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Setanta Sports"-->
+        <!--android:id="@+id/ssport"-->
+        <!--android:checked="false"-->
+        <!--android:layout_alignTop="@+id/livingtv"-->
+        <!--android:layout_alignLeft="@+id/paramount"-->
+        <!--android:layout_alignStart="@+id/paramount" />-->
+
+    <!--<CheckBox-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Sky (IRL) per channel"-->
+        <!--android:id="@+id/skyireland"-->
+        <!--android:checked="false"-->
+        <!--android:layout_alignTop="@+id/mtv"-->
+        <!--android:layout_alignLeft="@+id/ssport"-->
+        <!--android:layout_alignStart="@+id/ssport" />-->
+
+    <!--<CheckBox-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text=" Per Station (NI)"-->
+        <!--android:id="@+id/perstation"-->
+        <!--android:checked="false"-->
+        <!--android:layout_alignTop="@+id/skytv"-->
+        <!--android:layout_alignLeft="@+id/skyireland"-->
+        <!--android:layout_alignStart="@+id/skyireland" />-->
+
+    <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:textAppearance="?android:attr/textAppearanceLarge"-->
+        <!--android:id="@+id/textView7"-->
+        <!--android:text="Research, Web, Cinema &amp; IVR"-->
+        <!--android:layout_below="@+id/checkBox24"-->
+        <!--android:layout_alignParentLeft="true"-->
+        <!--android:layout_alignParentStart="true" />-->
+
+    <!--<fr.ganfra.materialspinner.MaterialSpinner-->
+        <!--android:id="@+id/spinner4"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--app:ms_arrowColor="#0000FF"-->
+        <!--app:ms_arrowSize="16dp"-->
+        <!--app:ms_floatingLabelColor="#000000"-->
+        <!--app:ms_floatingLabelText="Research Narrative Script (non-broadcast)"-->
+        <!--app:ms_hint="Research Narrative Script (non-broadcast)"-->
+        <!--app:ms_multiline="true"-->
+        <!--android:layout_below="@+id/textView7"-->
+        <!--android:layout_alignRight="@+id/textView6"-->
+        <!--android:layout_alignEnd="@+id/textView6"-->
+        <!--android:layout_alignLeft="@+id/textView7"-->
+        <!--android:layout_alignStart="@+id/textView7" />-->
+
+
+    <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:textAppearance="?android:attr/textAppearanceLarge"-->
+        <!--android:id="@+id/textView8"-->
+        <!--android:text="Web Advertising Usage Fees - Year 1"-->
+        <!--android:layout_below="@+id/spinner4" />-->
+
+    <!--<CheckBox-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text=" Internet Only Ad(individual platform)"-->
+        <!--android:id="@+id/int_only_ad"-->
+        <!--android:checked="false"-->
+       <!--android:layout_below="@+id/textView8" />-->
+
+    <!--<CheckBox-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text=" Internet only ad (all platforms)"-->
+        <!--android:id="@+id/int_only_allplatform"-->
+        <!--android:checked="false"-->
+        <!--android:layout_below="@+id/int_only_ad" />-->
+
+    <!--<CheckBox-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Pre-existing TV ad (individual platform)"-->
+        <!--android:id="@+id/pre_exis_tv_ad"-->
+        <!--android:checked="false"-->
+        <!--android:layout_below="@+id/int_only_allplatform" />-->
+
+    <!--<CheckBox-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Pre-existing Radio ad (individual platform)"-->
+        <!--android:id="@+id/pre_exist_radio"-->
+        <!--android:checked="false"-->
+        <!--android:layout_below="@+id/pre_exis_tv_ad" />-->
+
+    <!--<CheckBox-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text=" Pre-existing TV ad (all platforms)"-->
+        <!--android:id="@+id/pre_tv_allplatform"-->
+        <!--android:checked="false"-->
+        <!--android:layout_below="@+id/pre_exist_radio" />-->
+
+
+    <!--<CheckBox-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text=" Pre-existing Radio ad (all platforms)"-->
+        <!--android:id="@+id/pre_radio_allplatform"-->
+        <!--android:checked="false"-->
+        <!--android:layout_below="@+id/pre_tv_allplatform" />-->
+
+
+    <!--<CheckBox-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text=" Stings"-->
+        <!--android:id="@+id/stings"-->
+        <!--android:checked="false"-->
+        <!--android:layout_below="@+id/pre_radio_allplatform" />-->
+
+    <!--<CheckBox-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="  Internet buyout (all platforms)"-->
+        <!--android:id="@+id/int_buyout_all"-->
+        <!--android:checked="false"-->
+        <!--android:layout_below="@+id/stings" />-->
+
+
+    <!--<CheckBox-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text=" Explainer Video"-->
+        <!--android:id="@+id/explain_vid"-->
+        <!--android:checked="false"-->
+        <!--android:layout_below="@+id/int_buyout_all" />-->
+
+
+
+    <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:textAppearance="?android:attr/textAppearanceLarge"-->
+        <!--android:id="@+id/textView9"-->
+        <!--android:text="Web Corporate Usage Fees - Year 1"-->
+        <!--android:layout_below="@+id/explain_vid" />-->
+
+
+    <!--<CheckBox-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="App (plus artist BSF)"-->
+        <!--android:id="@+id/app"-->
+        <!--android:checked="false"-->
+        <!--android:layout_below="@+id/textView9" />-->
+
+    <!--<CheckBox-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Corporate (all platforms plus artist BSF)"-->
+        <!--android:id="@+id/corporate"-->
+        <!--android:checked="false"-->
+        <!--android:layout_below="@+id/app" />-->
+
+    <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:textAppearance="?android:attr/textAppearanceLarge"-->
+        <!--android:id="@+id/textView10"-->
+        <!--android:text="Cinema Advertising Fees - Year 1"-->
+        <!--android:layout_below="@+id/corporate" />-->
+
+
+    <!--<CheckBox-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="ROI"-->
+        <!--android:id="@+id/roi"-->
+        <!--android:checked="false"-->
+        <!--android:layout_below="@+id/textView10" />-->
+    <!--<CheckBox-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="NI"-->
+        <!--android:id="@+id/ni"-->
+        <!--android:checked="false"-->
+        <!--android:layout_below="@+id/roi" />-->
+
+    <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:textAppearance="?android:attr/textAppearanceLarge"-->
+        <!--android:id="@+id/textView11"-->
+        <!--android:text="IVR Usage Fees - Year1"-->
+        <!--android:layout_below="@+id/ni" />-->
+    <!--<CheckBox-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Per Page of Promtps"-->
+        <!--android:id="@+id/prompts"-->
+        <!--android:checked="false"-->
+        <!--android:layout_below="@+id/textView11" />-->
+    <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:textAppearance="?android:attr/textAppearanceLarge"-->
+        <!--android:id="@+id/textView12"-->
+        <!--android:text="Corporate Usage Fees - Year 1"-->
+        <!--android:layout_below="@+id/prompts" />-->
+
+    <!--<CheckBox-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Presentation or Pitch (for up to 1,000 viewers)"-->
+        <!--android:id="@+id/corp_usage_fees"-->
+        <!--android:checked="false"-->
+        <!--android:layout_below="@+id/textView12" />-->
+
+    <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:textAppearance="?android:attr/textAppearanceLarge"-->
+        <!--android:id="@+id/textView13"-->
+        <!--android:text="Price Stations Individually-Radio"-->
+        <!--android:layout_below="@+id/skytv"-->
+        <!--/>-->
+
+    <!--<CheckBox-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="RTE1 / RTE2 / RTE1 plus"-->
+        <!--android:id="@+id/checkBox15"-->
+        <!--android:checked="false"-->
+        <!--android:layout_below="@+id/textView13"-->
+         <!--/>-->
+
+    <!--<CheckBox-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="NewsTalk"-->
+        <!--android:id="@+id/checkBox16"-->
+        <!--android:checked="false"-->
+        <!--android:layout_below="@+id/checkBox15"-->
+      <!--/>-->
+
+    <!--<CheckBox-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="FM104"-->
+        <!--android:id="@+id/checkBox17"-->
+        <!--android:checked="false"-->
+        <!--android:layout_below="@+id/checkBox16"-->
+        <!--/>-->
+    <!--<CheckBox-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Dublin's Country 106"-->
+        <!--android:id="@+id/checkBox18"-->
+        <!--android:checked="false"-->
+        <!--android:layout_below="@+id/checkBox17"-->
+        <!--/>-->
+
+    <!--<CheckBox-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="96FM"-->
+        <!--android:id="@+id/checkBox19"-->
+        <!--android:checked="false"-->
+        <!--android:layout_below="@+id/checkBox18"-->
+        <!--/>-->
+    <!--<CheckBox-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="TX FM"-->
+        <!--android:id="@+id/checkBox20"-->
+        <!--android:checked="false"-->
+        <!--android:layout_below="@+id/checkBox19"-->
+        <!--/>-->
+
+    <!--<CheckBox-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="i102-104 (West and Northwest)"-->
+        <!--android:id="@+id/checkBox21"-->
+        <!--android:checked="false"-->
+        <!--android:layout_below="@+id/checkBox20"-->
+        <!--/>-->
+    <!--<CheckBox-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Today FM"-->
+        <!--android:id="@+id/checkBox22"-->
+        <!--android:checked="false"-->
+        <!--android:layout_below="@+id/checkBox21"-->
+        <!--/>-->
+    <!--<CheckBox-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Nova 100FM"-->
+        <!--android:id="@+id/checkBox23"-->
+        <!--android:checked="false"-->
+        <!--android:layout_below="@+id/checkBox22"-->
+        <!--/>-->
+
+    <!--<CheckBox-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Local / Community (per station)"-->
+        <!--android:id="@+id/checkBox24"-->
+        <!--android:checked="false"-->
+        <!--android:layout_below="@+id/checkBox23"-->
+        <!--/>-->
+
+    <!--<CheckBox-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Lyric FM"-->
+        <!--android:id="@+id/checkBox25"-->
+        <!--android:checked="false"-->
+        <!--android:layout_alignTop="@+id/checkBox15"-->
+        <!--android:layout_alignRight="@+id/textView13"-->
+        <!--android:layout_alignEnd="@+id/textView13" />-->
+
+    <!--<CheckBox-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Q102"-->
+        <!--android:id="@+id/checkBox26"-->
+        <!--android:checked="false"-->
+        <!--android:layout_alignTop="@+id/checkBox16"-->
+        <!--android:layout_alignLeft="@+id/checkBox25"-->
+        <!--android:layout_alignStart="@+id/checkBox25" />-->
+
+    <!--<CheckBox-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Spin"-->
+        <!--android:id="@+id/checkBox27"-->
+        <!--android:checked="false"-->
+        <!--android:layout_below="@+id/checkBox26"-->
+        <!--android:layout_alignLeft="@+id/checkBox26"-->
+        <!--android:layout_alignStart="@+id/checkBox26" />-->
+    <!--<CheckBox-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Red FM"-->
+        <!--android:id="@+id/checkBox28"-->
+        <!--android:checked="false"-->
+        <!--android:layout_below="@+id/checkBox27"-->
+        <!--android:layout_alignLeft="@+id/checkBox27"-->
+        <!--android:layout_alignStart="@+id/checkBox27" />-->
+
+    <!--<CheckBox-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Beat Fm"-->
+        <!--android:id="@+id/checkBox29"-->
+        <!--android:checked="false"-->
+        <!--android:layout_above="@+id/checkBox20"-->
+        <!--android:layout_toRightOf="@+id/checkBox24"-->
+        <!--android:layout_toEndOf="@+id/checkBox24" />-->
+
+    <!--<CheckBox-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="i105-107 (Northeast &amp; Midland)"-->
+        <!--android:id="@+id/checkBox30"-->
+        <!--android:checked="false"-->
+        <!--android:layout_below="@+id/checkBox29"-->
+        <!--android:layout_toRightOf="@+id/checkBox24"-->
+        <!--android:layout_toEndOf="@+id/checkBox24" />-->
+
+    <!--<CheckBox-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="4FM"-->
+        <!--android:id="@+id/checkBox31"-->
+        <!--android:checked="false"-->
+        <!--android:layout_below="@+id/checkBox30"-->
+        <!--android:layout_alignLeft="@+id/checkBox30"-->
+        <!--android:layout_alignStart="@+id/checkBox30" />-->
+
+    <!--<CheckBox-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Cool / Downtown FM (NI)"-->
+        <!--android:id="@+id/checkBox32"-->
+        <!--android:checked="false"-->
+        <!--android:layout_below="@+id/checkBox31"-->
+        <!--android:layout_alignLeft="@+id/checkBox31"-->
+        <!--android:layout_alignStart="@+id/checkBox31" />-->
+
+    <!--<CheckBox-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Per Station (NI)"-->
+        <!--android:id="@+id/checkBox33"-->
+        <!--android:checked="false"-->
+        <!--android:layout_alignTop="@+id/checkBox24"-->
+        <!--android:layout_alignRight="@+id/skyireland"-->
+        <!--android:layout_alignEnd="@+id/skyireland" />-->
+
+
+
+    <WebView
+        android:id="@+id/webView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:android="http://schemas.android.com/apk/res/android" />
+
+</RelativeLayout>
