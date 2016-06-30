@@ -1,29 +1,23 @@
 package enquire.ie.voicetalentireland;
 
-import android.media.MediaPlayer;
-import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.support.v7.widget.DefaultItemAnimator;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.Button;
+import android.media.*;
+import android.os.*;
+import android.support.v4.app.*;
+import android.support.v7.widget.*;
+import android.util.*;
+import android.view.*;
+import android.widget.*;
 
 
 public class FemaleFragment extends Fragment {
 
     Fragment fragment;
-
-
+    Button button;
+    MediaPlayer song1, song2, song3, song4;
+    Button bPlay;
     public FemaleFragment() {
         // Required empty public constructor
     }
-    Button button;
-
-    MediaPlayer song1,song2,song3,song4;
-    Button bPlay;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -31,17 +25,13 @@ public class FemaleFragment extends Fragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_two, container, false);
         song1 =  MediaPlayer.create(getActivity(), R.raw.amelia);
         song2 =  MediaPlayer.create(getActivity(), R.raw.rose_handerson);
         song3 =  MediaPlayer.create(getActivity(), R.raw.unakava);
         song4 =  MediaPlayer.create(getActivity(), R.raw.jennifer);
-
-
-
 
         RecyclerView recyclerView = (RecyclerView) view.findViewById(R.id.recyclerView1);
         registerForContextMenu(recyclerView);
@@ -71,7 +61,7 @@ public class FemaleFragment extends Fragment {
 
 
         recyclerView.addOnItemTouchListener(
-                new RecyclerItemClickListener(this.getActivity(), new RecyclerItemClickListener.OnItemClickListener() {
+                new RecyclerItemClickListener(this.getActivity(), recyclerView, new RecyclerItemClickListener.OnItemClickListener() {
                     @Override
                     public void onItemClick(View view, int position) {
 
@@ -132,22 +122,15 @@ public class FemaleFragment extends Fragment {
 
 
                     }
+
+                    @Override
+                    public void onItemLongClick(View view, int position) {
+                        Log.i("app", "onItemLongClick position = " + position);
+                    }
                 })
 
         );
 
-        recyclerView.setOnLongClickListener(new View.OnLongClickListener() {
-            @Override
-            public boolean onLongClick(View v) {
-
-
-
-
-
-
-                return false;
-            }
-        });
 
 
 

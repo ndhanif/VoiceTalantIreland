@@ -13,13 +13,12 @@ import android.widget.Button;
 
 public class MaleFragment extends Fragment {
 
+    Button bPlay;
+    MediaPlayer song1, song2, song3, song4, song5, song6;
+
     public MaleFragment() {
         // Required empty public constructor
     }
-
-    Button bPlay;
-
-    MediaPlayer song1, song2, song3, song4, song5, song6;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -64,7 +63,7 @@ public class MaleFragment extends Fragment {
         // 5. set item animator to DefaultAnimator
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         recyclerView.addOnItemTouchListener(
-                new RecyclerItemClickListener(this.getActivity(), new RecyclerItemClickListener.OnItemClickListener() {
+                new RecyclerItemClickListener(this.getActivity(), recyclerView, new RecyclerItemClickListener.OnItemClickListener() {
                     @Override
                     public void onItemClick(View view, int position) {
 
@@ -145,6 +144,11 @@ public class MaleFragment extends Fragment {
 
                         }
 
+
+                    }
+
+                    @Override
+                    public void onItemLongClick(View view, int position) {
 
                     }
                 })

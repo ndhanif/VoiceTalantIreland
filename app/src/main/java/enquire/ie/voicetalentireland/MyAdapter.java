@@ -57,6 +57,15 @@ public void onBindViewHolder(final ViewHolder viewHolder, int position) {
 
 }
 
+    // Return the size of your itemsData (invoked by the layout manager)
+    @Override
+    public int getItemCount() {
+        return itemsData.length;
+    }
+
+    public ItemData[] getItemsData() {
+        return itemsData;
+    }
 
     // inner class to hold a reference to each item of RecyclerView
 public static class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
@@ -81,21 +90,9 @@ public static class ViewHolder extends RecyclerView.ViewHolder implements View.O
 
     @Override
     public void onClick(View v) {
-        Log.w("myApp", "no network");
+        Log.i("app", "no network");
     }
 }
-
-
-    // Return the size of your itemsData (invoked by the layout manager)
-    @Override
-    public int getItemCount() {
-        return itemsData.length;
-    }
-
-
-    public ItemData[] getItemsData() {
-        return itemsData;
-    }
 
 
 
