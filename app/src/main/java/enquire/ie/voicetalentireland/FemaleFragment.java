@@ -1,12 +1,19 @@
 package enquire.ie.voicetalentireland;
 
-import android.media.*;
-import android.os.*;
-import android.support.v4.app.*;
-import android.support.v7.widget.*;
-import android.util.*;
-import android.view.*;
-import android.widget.*;
+import android.content.Intent;
+import android.media.MediaPlayer;
+import android.net.Uri;
+import android.os.Bundle;
+import android.os.Environment;
+import android.support.v4.app.Fragment;
+import android.support.v7.widget.DefaultItemAnimator;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.Button;
 
 
 public class FemaleFragment extends Fragment {
@@ -15,6 +22,7 @@ public class FemaleFragment extends Fragment {
     Button button;
     MediaPlayer song1, song2, song3, song4;
     Button bPlay;
+    String songpath;
     public FemaleFragment() {
         // Required empty public constructor
     }
@@ -127,8 +135,23 @@ public class FemaleFragment extends Fragment {
                     public void onItemLongClick(View view, int position) {
                         Log.i("app", "onItemLongClick position = " + position);
 
+
                         if(position==0)
                         {
+
+
+
+                            String sharePath = Environment.getExternalStorageDirectory().getPath() + R.raw.amelia;
+                            Uri uri = Uri.parse(sharePath);
+                            Intent share = new Intent(Intent.ACTION_SEND);
+                            share.setType("audio/*");
+                            share.putExtra(Intent.EXTRA_STREAM, uri);
+                            startActivity(Intent.createChooser(share, "Share Sound File"));
+
+
+
+
+
 
                         }
                     }
@@ -144,7 +167,6 @@ public class FemaleFragment extends Fragment {
 
         return view;
     }
-
 
 
     //stop audio when activity is change
