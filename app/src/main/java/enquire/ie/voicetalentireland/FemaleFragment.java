@@ -15,6 +15,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import java.io.InputStream;
+
 
 public class FemaleFragment extends Fragment {
 
@@ -139,10 +141,10 @@ public class FemaleFragment extends Fragment {
                         if(position==0)
                         {
 
+                            //String sharePath = Environment.getExternalStorageDirectory().getPath() + R.raw.amelia;
+                            //Uri uri = Uri.parse(sharePath);
 
-
-                            String sharePath = Environment.getExternalStorageDirectory().getPath() + R.raw.amelia;
-                            Uri uri = Uri.parse(sharePath);
+                            Uri uri = Uri.parse("android.resource://enquire.ie.voicetalentireland/raw/amelia");
                             Intent share = new Intent(Intent.ACTION_SEND);
                             share.setType("audio/*");
                             share.putExtra(Intent.EXTRA_STREAM, uri);
