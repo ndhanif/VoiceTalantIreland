@@ -126,6 +126,11 @@ public class FemaleFragment extends Fragment {
                     @Override
                     public void onItemLongClick(View view, int position) {
                         Log.i("app", "onItemLongClick position = " + position);
+
+                        if(position==0)
+                        {
+
+                        }
                     }
                 })
 
