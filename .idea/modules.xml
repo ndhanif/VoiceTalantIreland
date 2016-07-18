@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/VoiceTalentIreland.iml" filepath="$PROJECT_DIR$/VoiceTalentIreland.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/voicetalentirelandandroid.iml" filepath="$PROJECT_DIR$/voicetalentirelandandroid.iml" />
     </modules>
   </component>
 </project>
